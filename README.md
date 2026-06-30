@@ -61,7 +61,6 @@ The program follows this logic:
 ## Components Used
 
 ![Components Used](images/components-used.png)
-- Organize Arduino sketches into readable, maintainable code.
 
 ## What I Learned
 
