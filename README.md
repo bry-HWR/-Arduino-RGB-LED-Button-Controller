@@ -2,11 +2,11 @@
 
 ## Overview
 
-This project uses an Arduino Uno to control an RGB LED and a separate red LED using two push buttons.
+This project demonstrates how to control an RGB LED and a separate red LED using two push buttons connected to an Arduino Uno.
 
-The left and right button cycles through the RGB LED colors, while the right button controls the separate red LED. Pressing both buttons at the same time activates a special "COP mode," which turns on the blue RGB LED and the red LED together.
+The project uses digital inputs, digital outputs, and conditional logic to determine which LEDs should turn on based on the button presses.
 
-I built this project as part of learning Arduino programming, digital inputs and outputs, and C++.
+This project was designed and programmed from scratch as part of my journey learning Arduino programming and C++.
 
 ## Components Used
 
@@ -32,18 +32,33 @@ I built this project as part of learning Arduino programming, digital inputs and
 
 ## Features
 
-- Controls an RGB LED using two push buttons.
-- Cycles through RGB colors with the left push button.
-- Turns the red LED on and off with the right push button.
-- Activates "COP Mode" when both buttons are pressed simultaneously.
-- Uses INPUT_PULLUP for reliable button detection.
-- Written in C++ using the Arduino IDE.
+- Controls an RGB LED and a separate red LED using two push buttons.
+- Uses `INPUT_PULLUP` for reliable button input detection.
+- Turns on the RGB green LED when the left button is pressed.
+- Turns on both red LEDs when the right button is pressed.
+- Activates **COP Mode** (blue RGB LED + red LED) when both buttons are pressed simultaneously.
+- Turns all LEDs off when no buttons are pressed.
 
 ## How It Works
 
-The Arduino continuously checks the state of both push buttons using the INPUT_PULLUP configuration.
+The Arduino continuously checks the state of both push buttons using the `INPUT_PULLUP` configuration.
 
-- Left Push Button: Cycles through the RGB LED colors.
-- Right Push Button: Turns the separate red LED on while the button is pressed.
-- Both Buttons: Activates **COP Mode**, turning on both the blue RGB LED and the red LED.
-- No Buttons Pressed: All LEDs remain off.
+The program follows this logic:
+
+- **Both buttons pressed:** Activates **COP Mode**, turning on the blue RGB LED and the separate red LED.
+- **Right button pressed:** Turns on the RGB red LED and the separate red LED.
+- **Left button pressed:** Turns on the RGB green LED.
+- **No buttons pressed:** Turns all LEDs off.
+
+The `if`, `else if`, and `else` statements ensure that only one operating mode is active at a time.
+
+## What I Learned
+
+While building this project, I learned how to:
+
+- Configure Arduino pins as inputs and outputs.
+- Use `INPUT_PULLUP` to simplify button wiring.
+- Read button states using `digitalRead()`.
+- Control multiple LEDs using `digitalWrite()`.
+- Build program logic using `if`, `else if`, and `else`.
+- Organize Arduino sketches into readable, maintainable code.
