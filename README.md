@@ -50,8 +50,6 @@ The program follows this logic:
 - **Left button pressed:** Turns on the RGB green LED.
 - **No buttons pressed:** Turns all LEDs off.
 
-The `if`, `else if`, and `else` statements ensure that only one operating mode is active at a time.
-
 ## Circuit Schematic
 
 ![Circuit Schematic](images/circuit-schematic.png)
