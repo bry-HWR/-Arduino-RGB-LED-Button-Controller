@@ -52,13 +52,34 @@ The program follows this logic:
 
 The `if`, `else if`, and `else` statements ensure that only one operating mode is active at a time.
 
+## Circuit Schematic
+
+![Circuit Schematic](images/circuit-schematic.png)
+
+## Pin Connection Summary
+
+![Pin Connection Summary](images/pin-connection-summary.png)
+
+## Components Used
+
+![Components Used](images/components-used.png)
+- Organize Arduino sketches into readable, maintainable code.
+
 ## What I Learned
 
 While building this project, I learned how to:
 
 - Configure Arduino pins as inputs and outputs.
-- Use `INPUT_PULLUP` to simplify button wiring.
+- Use `INPUT_PULLUP` for reliable button detection.
 - Read button states using `digitalRead()`.
-- Control multiple LEDs using `digitalWrite()`.
-- Build program logic using `if`, `else if`, and `else`.
-- Organize Arduino sketches into readable, maintainable code.
+- Control LEDs using `digitalWrite()`.
+- Build decision making using `if`, `else if`, and `else`.
+- Organize an Arduino project with clear documentation using GitHub.
+
+## Future Improvements
+
+- Add RGB color cycling.
+- Implement button debouncing.
+- Add PWM brightness control.
+- Store the last selected color using EEPROM.
+- Add a passive buzzer for audio feedback.
